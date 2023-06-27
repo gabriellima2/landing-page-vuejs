@@ -16,3 +16,12 @@ body {
 	font-family: $primary-font;
 	background-color: $main-color;
 }
+
+li {
+	list-style: none;
+}
+
+a {
+	color: $font-primary-color;
+	text-decoration: none;
+}
