@@ -17,6 +17,9 @@
 <style scoped lang="scss">
 	@import "../styles/scss/main";
 	.header {
+		width: 100%;
+		position: fixed;
+		top: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
