@@ -9,7 +9,7 @@
 		<section class="hero">
 			<TheContainer>
 				<div class="hero__texts">
-					<h1>Powerful for developers Fast for everyone</h1>
+					<h1>Powerful for developers. Fast for everyone.</h1>
 					<p>
 						Bring blockchain to the people. Solana supports experiences for
 						power users, new consumers, and everyone in between.
@@ -36,7 +36,7 @@
 		@include center(column);
 		height: 85vh;
 		max-width: 100%;
-		min-height: 100%;
+		min-height: 100vh;
 		background-image: url("/hero-bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -71,6 +71,7 @@
 		display: flex;
 		gap: 24px;
 		margin-top: 52px;
+		flex-wrap: wrap;
 		@media screen and (min-width: $md-screen) {
 			align-items: center;
 			justify-content: center;
