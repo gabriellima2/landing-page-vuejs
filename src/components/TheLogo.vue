@@ -1,5 +1,5 @@
 <template>
-	<img src="../../public/logo.svg" alt="Logo of Solana" class="logo" />
+	<img src="/logo.svg" alt="Logo of Solana" class="logo" />
 </template>
 
 <style scoped>

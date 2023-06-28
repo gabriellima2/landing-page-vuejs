@@ -37,7 +37,7 @@
 		height: 85vh;
 		max-width: 100%;
 		min-height: 100%;
-		background-image: url("../public/hero-bg.png");
+		background-image: url("/hero-bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-top: 67px;
