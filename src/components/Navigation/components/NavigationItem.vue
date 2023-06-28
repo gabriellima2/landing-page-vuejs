@@ -27,9 +27,7 @@
 	@import "../../../styles/scss/main";
 	$default-brightness: 5;
 	.navigation-item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include center(row);
 		gap: 4px;
 	}
 	.navigation-item__link {
