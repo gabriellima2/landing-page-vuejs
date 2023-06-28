@@ -1,5 +1,10 @@
 <template>
-	<TheHeader />
+	<TheHeader
+		:advertisement="{
+			href: '#',
+			text: 'Breakpoint 2023 - New City. New Vibes - Get Early Access ->',
+		}"
+	/>
 	<main>
 		<section class="hero">
 			<TheContainer>
