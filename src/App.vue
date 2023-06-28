@@ -10,6 +10,10 @@
 						power users, new consumers, and everyone in between.
 					</p>
 				</div>
+				<div class="hero__buttons">
+					<BaseButton title="Start">Start Building</BaseButton>
+					<BaseButton title="Docs" :bordered="true">Read Docs</BaseButton>
+				</div>
 			</TheContainer>
 		</section>
 	</main>
@@ -17,12 +21,12 @@
 
 <script setup lang="ts">
 	import TheContainer from "./components/TheContainer.vue";
+	import BaseButton from "./components/BaseButton.vue";
 	import TheHeader from "./components/TheHeader.vue";
 </script>
 
 <style scoped lang="scss">
 	@import "./styles/scss/main";
-
 	.hero {
 		@include center(column);
 		height: 85vh;
@@ -33,7 +37,6 @@
 		background-size: cover;
 		padding-top: 67px;
 	}
-
 	.hero__texts {
 		max-width: 780px;
 		display: flex;
@@ -57,6 +60,15 @@
 				max-width: 24ch;
 				font-size: $xxl-font-size;
 			}
+		}
+	}
+	.hero__buttons {
+		display: flex;
+		gap: 24px;
+		margin-top: 52px;
+		@media screen and (min-width: $md-screen) {
+			align-items: center;
+			justify-content: center;
 		}
 	}
 </style>

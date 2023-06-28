@@ -25,3 +25,10 @@ a {
 	color: $font-primary-color;
 	text-decoration: none;
 }
+
+button {
+	border: none;
+	color: $font-primary-color;
+	font-family: $secondary-font;
+	cursor: pointer;
+}
