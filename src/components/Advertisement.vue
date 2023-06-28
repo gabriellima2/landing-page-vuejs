@@ -21,6 +21,7 @@
 		color: $main-color;
 		font-family: $secondary-font;
 		text-align: center;
+		z-index: 10000;
 		background: linear-gradient(
 			to right,
 			$util-light-blue-color 0%,

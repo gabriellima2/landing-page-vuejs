@@ -30,6 +30,7 @@
 		position: fixed;
 		top: 0;
 		background-color: #0000009a;
+		backdrop-filter: blur(10px);
 	}
 	.header__content {
 		width: 100%;

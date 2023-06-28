@@ -28,9 +28,15 @@
 	$default-brightness: 5;
 	.navigation-item {
 		@include center(row);
+		justify-content: flex-start;
 		gap: 4px;
+		@media screen and (min-width: $md-screen) {
+			justify-content: center;
+		}
 	}
 	.navigation-item__link {
+		display: block;
+		width: 100%;
 		color: $font-secondary-color;
 		&:hover,
 		&:focus {
@@ -39,6 +45,10 @@
 		&:hover ~ .navigation-item__arrow,
 		&:focus ~ .navigation-item__arrow {
 			filter: brightness($default-brightness);
+		}
+		@media screen and (min-width: $md-screen) {
+			display: inline-block;
+			width: auto;
 		}
 	}
 	.navigation-item__arrow {
