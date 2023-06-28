@@ -20,6 +20,7 @@
 		padding: 4px 24px;
 		color: $main-color;
 		font-family: $secondary-font;
+		text-align: center;
 		background: linear-gradient(
 			to right,
 			$util-light-blue-color 0%,
