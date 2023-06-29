@@ -6,11 +6,7 @@
 			:title="props.title ?? `Go to ${props.text}`"
 			>{{ text }}
 		</a>
-		<img
-			src="../../../../public/chevron-down.svg"
-			alt="Arrow"
-			class="navigation-item__arrow"
-		/>
+		<img src="/chevron-down.svg" alt="Arrow" class="navigation-item__arrow" />
 	</li>
 </template>
 
