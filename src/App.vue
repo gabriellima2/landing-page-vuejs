@@ -6,43 +6,53 @@
 		}"
 	/>
 	<main>
-		<section class="hero">
-			<TheContainer>
-				<div class="hero__texts">
+		<section class="hero-section">
+			<TheContainer class="hero-content">
+				<div class="hero-content__texts">
 					<h1>Powerful for developers. Fast for everyone.</h1>
 					<p>
 						Bring blockchain to the people. Solana supports experiences for
 						power users, new consumers, and everyone in between.
 					</p>
 				</div>
-				<div class="hero__buttons">
+				<div class="hero-content__buttons">
 					<BaseButton title="Start">Start Building</BaseButton>
 					<BaseButton title="Docs" :bordered="true">Read Docs</BaseButton>
 				</div>
+				<footer class="hero-companies">
+					<h2 class="hero-companies__title">
+						Powering tools and integrations from companies all around the world
+					</h2>
+					<Companies :items="companies" />
+				</footer>
 			</TheContainer>
 		</section>
 	</main>
 </template>
 
 <script setup lang="ts">
+	import Companies from "./components/Companies/Companies.vue";
 	import TheContainer from "./components/TheContainer.vue";
 	import BaseButton from "./components/BaseButton.vue";
 	import TheHeader from "./components/TheHeader.vue";
+
+	import { companies } from "./assets/companies";
 </script>
 
 <style scoped lang="scss">
 	@import "./styles/scss/main";
-	.hero {
+	.hero-section {
 		@include center(column);
-		height: 85vh;
 		max-width: 100%;
-		min-height: 100vh;
 		background-image: url("/hero-bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding-top: 67px;
+		padding-top: 217px;
 	}
-	.hero__texts {
+	.hero-content {
+		@include center(column);
+	}
+	.hero-content__texts {
 		max-width: 780px;
 		display: flex;
 		flex-direction: column;
@@ -67,7 +77,7 @@
 			}
 		}
 	}
-	.hero__buttons {
+	.hero-content__buttons {
 		display: flex;
 		gap: 24px;
 		margin-top: 52px;
@@ -75,6 +85,20 @@
 		@media screen and (min-width: $md-screen) {
 			align-items: center;
 			justify-content: center;
+		}
+	}
+	.hero-companies {
+		@include center(column);
+		gap: 34px;
+		margin-top: 120px;
+	}
+	.hero-companies__title {
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $font-tertiary-color;
+		font-size: $default-font-size;
+		@media screen and (min-width: $md-screen) {
+			text-align: center;
 		}
 	}
 </style>
