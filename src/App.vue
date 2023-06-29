@@ -27,12 +27,48 @@
 				</footer>
 			</TheContainer>
 		</section>
+		<section class="details-section">
+			<TheContainer>
+				<section class="row-section">
+					<SectionTitle class="community-title">
+						Join a community of millions.</SectionTitle
+					>
+					<div class="community-content">
+						<div class="community-data">
+							<CommunityDataValue class="community-accounts"
+								>11.5M+</CommunityDataValue
+							>
+							<CommunityDataDescription
+								>Active Accounts</CommunityDataDescription
+							>
+						</div>
+						<div class="community-data">
+							<CommunityDataValue class="community-nfts"
+								>21.9M</CommunityDataValue
+							>
+							<CommunityDataDescription>NFTS Minted</CommunityDataDescription>
+						</div>
+						<div class="community-data">
+							<CommunityDataValue class="community-transactions"
+								>$0.00025</CommunityDataValue
+							>
+							<CommunityDataDescription
+								>Average Cost Per Transaction</CommunityDataDescription
+							>
+						</div>
+					</div>
+				</section>
+			</TheContainer>
+		</section>
 	</main>
 </template>
 
 <script setup lang="ts">
+	import CommunityDataDescription from "./components/CommunityDataDescription.vue";
+	import CommunityDataValue from "./components/CommunityDataValue.vue";
 	import Companies from "./components/Companies/Companies.vue";
 	import TheContainer from "./components/TheContainer.vue";
+	import SectionTitle from "./components/SectionTitle.vue";
 	import BaseButton from "./components/BaseButton.vue";
 	import TheHeader from "./components/TheHeader.vue";
 
@@ -100,5 +136,39 @@
 		@media screen and (min-width: $md-screen) {
 			text-align: center;
 		}
+	}
+	.row-section {
+		@include center(row);
+		width: 100%;
+		justify-content: space-between;
+		gap: 48px;
+		flex-wrap: wrap;
+	}
+	.details-section {
+		@include center(column);
+		width: 100%;
+		padding: 120px 0px;
+	}
+	.community-title {
+		width: 300px;
+	}
+	.community-content {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+	}
+	.community-data {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+	.community-accounts {
+		@include set-gradient-text($brand-color, $util-light-green-color);
+	}
+	.community-nfts {
+		@include set-gradient-text($util-strong-blue-color, $util-light-blue-color);
+	}
+	.community-transactions {
+		@include set-gradient-text($util-cyan-color, $util-dark-blue-color);
 	}
 </style>

@@ -4,3 +4,13 @@
 	justify-content: center;
 	flex-direction: $direction;
 }
+
+@mixin set-gradient-text($first-color, $second-color, $direction: to right) {
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-image: linear-gradient($direction,
+			$first-color 0%,
+			$second-color 100%);
+}
