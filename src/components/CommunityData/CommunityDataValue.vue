@@ -8,7 +8,7 @@
 </script>
 
 <style scoped lang="scss">
-	@import "../styles/scss/main";
+	@import "../../styles/scss/main";
 	.community-data-value {
 		font-size: $xxl-font-size;
 		text-transform: uppercase;

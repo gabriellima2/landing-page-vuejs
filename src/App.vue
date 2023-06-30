@@ -31,31 +31,31 @@
 			<TheContainer>
 				<section class="row-section">
 					<SectionTitle class="community-title">
-						Join a community of millions.</SectionTitle
-					>
+						Join a community of millions.
+					</SectionTitle>
 					<div class="community-content">
-						<div class="community-data">
-							<CommunityDataValue class="community-accounts"
-								>11.5M+</CommunityDataValue
-							>
-							<CommunityDataDescription
-								>Active Accounts</CommunityDataDescription
-							>
-						</div>
-						<div class="community-data">
-							<CommunityDataValue class="community-nfts"
-								>21.9M</CommunityDataValue
-							>
+						<CommunityData>
+							<CommunityDataValue class="community-accounts">
+								11.5M+
+							</CommunityDataValue>
+							<CommunityDataDescription>
+								Active Accounts
+							</CommunityDataDescription>
+						</CommunityData>
+						<CommunityData>
+							<CommunityDataValue class="community-nfts">
+								21.9M
+							</CommunityDataValue>
 							<CommunityDataDescription>NFTS Minted</CommunityDataDescription>
-						</div>
-						<div class="community-data">
-							<CommunityDataValue class="community-transactions"
-								>$0.00025</CommunityDataValue
-							>
-							<CommunityDataDescription
-								>Average Cost Per Transaction</CommunityDataDescription
-							>
-						</div>
+						</CommunityData>
+						<CommunityData>
+							<CommunityDataValue class="community-transactions">
+								$0.00025
+							</CommunityDataValue>
+							<CommunityDataDescription>
+								Average Cost Per Transaction
+							</CommunityDataDescription>
+						</CommunityData>
 					</div>
 				</section>
 			</TheContainer>
@@ -64,8 +64,9 @@
 </template>
 
 <script setup lang="ts">
-	import CommunityDataDescription from "./components/CommunityDataDescription.vue";
-	import CommunityDataValue from "./components/CommunityDataValue.vue";
+	import CommunityDataDescription from "./components/CommunityData/CommunityDataDescription.vue";
+	import CommunityDataValue from "./components/CommunityData/CommunityDataValue.vue";
+	import CommunityData from "./components/CommunityData/CommunityDataValue.vue";
 	import Companies from "./components/Companies/Companies.vue";
 	import TheContainer from "./components/TheContainer.vue";
 	import SectionTitle from "./components/SectionTitle.vue";
@@ -156,11 +157,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 48px;
-	}
-	.community-data {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
 	}
 	.community-accounts {
 		@include set-gradient-text($brand-color, $util-light-green-color);

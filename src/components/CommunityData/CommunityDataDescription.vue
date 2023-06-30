@@ -5,7 +5,7 @@
 <script setup lang="ts"></script>
 
 <style scoped lang="scss">
-	@import "../styles/scss/main";
+	@import "../../styles/scss/main";
 	.community-data-description {
 		font-family: $secondary-font;
 		font-size: $sm-font-size;
