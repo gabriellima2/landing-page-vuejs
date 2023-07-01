@@ -1,35 +1,35 @@
 <template>
-	<li>
-		<BaseCard>
-			<div class="features-item__texts">
-				<BaseCardTitle :class="title.toLowerCase()">{{ title }}</BaseCardTitle>
-				<BaseCardParagraph>
-					{{ paragraph }}
-				</BaseCardParagraph>
-			</div>
-			<BaseCardFooter>
+	<BaseCard :class="props.class">
+		<div class="features-item__texts">
+			<BaseCardTitle>{{ title }}</BaseCardTitle>
+			<slot></slot>
+		</div>
+		<BaseCardFooter>
+			<div>
+				<Indicator v-if="hasIndicator" />
 				<h2 class="features-item__data-title">{{ data.value }}</h2>
-				<CommunityDataDescription>
-					{{ data.label }}
-				</CommunityDataDescription>
-			</BaseCardFooter>
-		</BaseCard>
-	</li>
+			</div>
+			<CommunityDataDescription>
+				{{ data.label }}
+			</CommunityDataDescription>
+		</BaseCardFooter>
+	</BaseCard>
 </template>
 
 <script setup lang="ts">
 	import CommunityDataDescription from "../../CommunityData/CommunityDataDescription.vue";
-	import BaseCardParagraph from "../../BaseCard/BaseCardParagraph.vue";
 	import BaseCardFooter from "../../BaseCard/BaseCardFooter.vue";
 	import BaseCardTitle from "../../BaseCard/BaseCardTitle.vue";
 	import BaseCard from "../../BaseCard/BaseCard.vue";
+	import Indicator from "../../Indicator.vue";
 
 	export type FeaturesItemProps = {
 		title: string;
-		paragraph: string;
 		data: { value: string; label: string };
+		class?: string;
+		hasIndicator?: boolean;
 	};
-	defineProps<FeaturesItemProps>();
+	const props = defineProps<FeaturesItemProps>();
 </script>
 
 <style scoped lang="scss">

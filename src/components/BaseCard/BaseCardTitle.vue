@@ -1,16 +1,11 @@
 <template>
-	<div :class="`title-container ${props.class}`">
+	<div class="title-container">
 		<span class="base-card-title__indicator"></span>
 		<h1 class="base-card-title">
 			<slot></slot>
 		</h1>
 	</div>
 </template>
-
-<script setup lang="ts">
-	type BaseCardTitleProps = { class?: string };
-	const props = defineProps<BaseCardTitleProps>();
-</script>
 
 <style scoped lang="scss">
 	@import "../../styles/scss/main";
