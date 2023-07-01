@@ -27,36 +27,13 @@
 				</footer>
 			</TheContainer>
 		</section>
-		<section class="details-section">
+		<section class="community-section">
 			<TheContainer>
 				<section class="row-section">
-					<SectionTitle class="community-title">
+					<SectionTitle class="community-section__platform-data-title">
 						Join a community of millions.
 					</SectionTitle>
-					<div class="community-content">
-						<CommunityData>
-							<CommunityDataValue class="community-accounts">
-								11.5M+
-							</CommunityDataValue>
-							<CommunityDataDescription>
-								Active Accounts
-							</CommunityDataDescription>
-						</CommunityData>
-						<CommunityData>
-							<CommunityDataValue class="community-nfts">
-								21.9M
-							</CommunityDataValue>
-							<CommunityDataDescription>NFTS Minted</CommunityDataDescription>
-						</CommunityData>
-						<CommunityData>
-							<CommunityDataValue class="community-transactions">
-								$0.00025
-							</CommunityDataValue>
-							<CommunityDataDescription>
-								Average Cost Per Transaction
-							</CommunityDataDescription>
-						</CommunityData>
-					</div>
+					<PlatformData />
 				</section>
 			</TheContainer>
 		</section>
@@ -64,9 +41,7 @@
 </template>
 
 <script setup lang="ts">
-	import CommunityDataDescription from "./components/CommunityData/CommunityDataDescription.vue";
-	import CommunityDataValue from "./components/CommunityData/CommunityDataValue.vue";
-	import CommunityData from "./components/CommunityData/CommunityDataValue.vue";
+	import PlatformData from "./components/PlatformData/PlatformData.vue";
 	import Companies from "./components/Companies/Companies.vue";
 	import TheContainer from "./components/TheContainer.vue";
 	import SectionTitle from "./components/SectionTitle.vue";
@@ -145,26 +120,16 @@
 		gap: 48px;
 		flex-wrap: wrap;
 	}
-	.details-section {
+	.community-section {
 		@include center(column);
 		width: 100%;
 		padding: 120px 0px;
+		max-width: 100%;
+		background-image: url("/community-bg.png");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
-	.community-title {
+	.community-section__platform-data-title {
 		width: 300px;
-	}
-	.community-content {
-		display: flex;
-		flex-direction: column;
-		gap: 48px;
-	}
-	.community-accounts {
-		@include set-gradient-text($brand-color, $util-light-green-color);
-	}
-	.community-nfts {
-		@include set-gradient-text($util-strong-blue-color, $util-light-blue-color);
-	}
-	.community-transactions {
-		@include set-gradient-text($util-cyan-color, $util-dark-blue-color);
 	}
 </style>
