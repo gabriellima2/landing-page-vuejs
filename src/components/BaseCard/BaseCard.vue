@@ -14,7 +14,7 @@
 		width: 100%;
 		border-radius: 24px;
 		padding: 32px;
-		background-color: #0000009a;
 		backdrop-filter: blur(10px);
+		background-color: #0000009a;
 	}
 </style>

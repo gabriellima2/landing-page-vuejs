@@ -5,9 +5,9 @@
 			<slot></slot>
 		</div>
 		<BaseCardFooter>
-			<div>
+			<div class="data">
 				<Indicator v-if="hasIndicator" />
-				<h2 class="features-item__data-title">{{ data.value }}</h2>
+				<h2 class="data__value">{{ data.value }}</h2>
 			</div>
 			<CommunityDataDescription>
 				{{ data.label }}
@@ -37,9 +37,14 @@
 	.features-item__texts {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: 16px;
 	}
-	.features-item__data-title {
+	.data {
+		display: flex;
+		align-items: flex-start;
+		gap: 6px;
+	}
+	.data__value {
 		font-weight: 400;
 		font-size: 1.444rem;
 		color: $font-primary-color;

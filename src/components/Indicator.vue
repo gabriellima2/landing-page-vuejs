@@ -9,6 +9,7 @@
 		width: 4px;
 		height: 4px;
 		border-radius: 100%;
+		margin-top: 4px;
 		background-color: $util-light-blue-color;
 	}
 </style>
