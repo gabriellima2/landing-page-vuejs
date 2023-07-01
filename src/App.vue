@@ -30,10 +30,26 @@
 		<section class="community-section">
 			<TheContainer>
 				<section class="row-section">
-					<SectionTitle class="community-section__platform-data-title">
+					<SectionTitle
+						class="row-section__title community-section__platform-data-title"
+					>
 						Join a community of millions.
 					</SectionTitle>
 					<PlatformData />
+				</section>
+				<section class="row-section">
+					<div>
+						<SectionTitle
+							class="row-section__title community-section__features-title"
+						>
+							Made for mass adoption
+						</SectionTitle>
+						<small class="community-section__features-live">
+							<Indicator />
+							LIVE DATA
+						</small>
+					</div>
+					<Features />
 				</section>
 			</TheContainer>
 		</section>
@@ -43,10 +59,12 @@
 <script setup lang="ts">
 	import PlatformData from "./components/PlatformData/PlatformData.vue";
 	import Companies from "./components/Companies/Companies.vue";
+	import Features from "./components/Features/Features.vue";
 	import TheContainer from "./components/TheContainer.vue";
 	import SectionTitle from "./components/SectionTitle.vue";
 	import BaseButton from "./components/BaseButton.vue";
 	import TheHeader from "./components/TheHeader.vue";
+	import Indicator from "./components/Indicator.vue";
 
 	import { companies } from "./assets/companies";
 </script>
@@ -114,16 +132,21 @@
 		}
 	}
 	.row-section {
-		@include center(row);
+		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		gap: 48px;
 		flex-wrap: wrap;
+		margin-top: 120px;
+	}
+	.row-section__title {
+		@media screen and (min-width: $md-screen) {
+			margin-top: 64px;
+		}
 	}
 	.community-section {
 		@include center(column);
 		width: 100%;
-		padding: 120px 0px;
 		max-width: 100%;
 		background-image: url("/community-bg.png");
 		background-repeat: no-repeat;
@@ -131,5 +154,14 @@
 	}
 	.community-section__platform-data-title {
 		width: 300px;
+	}
+	.community-section__features-title {
+		width: 250px;
+	}
+	.community-section__features-live {
+		display: flex;
+		gap: 6px;
+		margin-top: 8px;
+		color: $util-gray-color;
 	}
 </style>

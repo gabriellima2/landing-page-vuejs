@@ -31,6 +31,7 @@
 		top: 0;
 		background-color: #0000009a;
 		backdrop-filter: blur(10px);
+		z-index: 1000;
 	}
 	.header__content {
 		width: 100%;
