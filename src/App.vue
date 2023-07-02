@@ -56,7 +56,11 @@
 		<section>
 			<div>
 				<header>
-					<ServiceControl :names="serviceNames" :is-active-service="false" />
+					<ServiceControl
+						:names="serviceNames"
+						:current-service-index="dynamicService.currentIndex.value"
+						:handle-service-index-change="dynamicService.handleIndexChange"
+					/>
 				</header>
 				<section>
 					<Service v-bind="currentService" />
@@ -68,6 +72,8 @@
 
 <script setup lang="ts">
 	import { computed } from "vue";
+
+	import { useDynamicContentByIndex } from "./composables/useDynamicContentByIndex";
 
 	import PlatformData from "./components/PlatformData/PlatformData.vue";
 	import ServiceControl from "./components/Service/ServiceControl.vue";
@@ -83,8 +89,11 @@
 	import { companies } from "./assets/companies";
 	import { services } from "./assets/services";
 
-	const currentService = services[0];
+	const dynamicService = useDynamicContentByIndex();
 	const serviceNames = computed(() => services.map((service) => service.name));
+	const currentService = computed(
+		() => services[dynamicService.currentIndex.value]
+	);
 </script>
 
 <style scoped lang="scss">
