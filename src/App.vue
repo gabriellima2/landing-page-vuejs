@@ -53,13 +53,27 @@
 				</section>
 			</TheContainer>
 		</section>
+		<section>
+			<div>
+				<header>
+					<ServiceControl :names="serviceNames" :is-active-service="false" />
+				</header>
+				<section>
+					<Service v-bind="currentService" />
+				</section>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script setup lang="ts">
+	import { computed } from "vue";
+
 	import PlatformData from "./components/PlatformData/PlatformData.vue";
+	import ServiceControl from "./components/Service/ServiceControl.vue";
 	import Companies from "./components/Companies/Companies.vue";
 	import Features from "./components/Features/Features.vue";
+	import Service from "./components/Service/Service.vue";
 	import TheContainer from "./components/TheContainer.vue";
 	import SectionTitle from "./components/SectionTitle.vue";
 	import BaseButton from "./components/BaseButton.vue";
@@ -67,6 +81,10 @@
 	import Indicator from "./components/Indicator.vue";
 
 	import { companies } from "./assets/companies";
+	import { services } from "./assets/services";
+
+	const currentService = services[0];
+	const serviceNames = computed(() => services.map((service) => service.name));
 </script>
 
 <style scoped lang="scss">
