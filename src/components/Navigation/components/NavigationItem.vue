@@ -34,9 +34,13 @@
 		display: block;
 		width: 100%;
 		color: $font-secondary-color;
+		transition: all 0.2s ease;
 		&:hover,
 		&:focus {
 			filter: brightness($default-brightness);
+		}
+		& ~ .navigation-item__arrow {
+			transition: all 0.2s ease;
 		}
 		&:hover ~ .navigation-item__arrow,
 		&:focus ~ .navigation-item__arrow {

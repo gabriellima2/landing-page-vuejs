@@ -24,6 +24,7 @@
 		border: 1px solid transparent;
 		font-family: $primary-font;
 		background-color: $contrast-primary-color;
+		transition: all 0.2s ease;
 		&:hover,
 		&:focus {
 			filter: brightness(1.5);
