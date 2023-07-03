@@ -53,9 +53,10 @@
 				</section>
 			</TheContainer>
 		</section>
-		<section>
-			<div>
-				<header>
+		<section class="services-section">
+			<TheContainer>
+				<header class="services-section__header">
+					<SectionTitle>Build for growth.</SectionTitle>
 					<ServiceControls
 						:names="serviceNames"
 						:current-service-index="dynamicService.currentIndex.value"
@@ -65,7 +66,7 @@
 				<section>
 					<Service v-bind="currentService" />
 				</section>
-			</div>
+			</TheContainer>
 		</section>
 	</main>
 </template>
@@ -190,5 +191,18 @@
 		gap: 6px;
 		margin-top: 8px;
 		color: $util-gray-color;
+	}
+	.services-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 120px;
+	}
+	.services-section__header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 32px;
+		margin-bottom: 32px;
 	}
 </style>
