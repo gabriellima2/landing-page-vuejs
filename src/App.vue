@@ -56,7 +56,7 @@
 		<section>
 			<div>
 				<header>
-					<ServiceControl
+					<ServiceControls
 						:names="serviceNames"
 						:current-service-index="dynamicService.currentIndex.value"
 						:handle-service-index-change="dynamicService.handleIndexChange"
@@ -76,7 +76,7 @@
 	import { useDynamicContentByIndex } from "./composables/useDynamicContentByIndex";
 
 	import PlatformData from "./components/PlatformData/PlatformData.vue";
-	import ServiceControl from "./components/Service/ServiceControl.vue";
+	import ServiceControls from "./components/Service/ServiceControls.vue";
 	import Companies from "./components/Companies/Companies.vue";
 	import Features from "./components/Features/Features.vue";
 	import Service from "./components/Service/Service.vue";
