@@ -26,4 +26,9 @@
 
 <style scoped lang="scss">
 	@import "../../styles/scss/main";
+	.service-controls {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+	}
 </style>
