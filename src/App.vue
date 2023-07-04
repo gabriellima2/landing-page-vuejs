@@ -68,7 +68,7 @@
 				</section>
 			</TheContainer>
 		</section>
-		<section>
+		<section class="join-us-section">
 			<section class="community-images">
 				<div class="community-images__title-container">
 					<TheContainer>
@@ -76,6 +76,15 @@
 					</TheContainer>
 				</div>
 				<CommunityImageSlider />
+			</section>
+			<section class="start-building">
+				<TheContainer class="start-building-content">
+					<SectionTitle class="start-building-content__title"
+						>It's time to join the thousands of creators, artists, and
+						developers using Solana.</SectionTitle
+					>
+					<BaseButton>Start building</BaseButton>
+				</TheContainer>
 			</section>
 		</section>
 	</main>
@@ -222,5 +231,24 @@
 		flex-direction: column;
 		gap: 32px;
 		margin-top: 120px;
+	}
+	.join-us-section {
+		max-width: 100%;
+		background-image: url("/join-us-bg.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: 32px;
+	}
+	.start-building {
+		@include center(column);
+		padding: 120px 0px 190px 0px;
+	}
+	.start-building-content {
+		@include center(column);
+		gap: 32px;
+	}
+	.start-building-content__title {
+		max-width: 730px;
+		text-align: center;
 	}
 </style>
