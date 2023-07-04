@@ -14,6 +14,9 @@
 		display: flex;
 		gap: 32px;
 		overflow: hidden;
+		&:hover > .infinite-auto-scroll__content {
+			animation-play-state: paused;
+		}
 	}
 	.infinite-auto-scroll__content {
 		animation: slide 10s linear infinite;
