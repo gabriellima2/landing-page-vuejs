@@ -69,7 +69,14 @@
 			</TheContainer>
 		</section>
 		<section>
-			<CommunityImageSlider />
+			<section class="community-images">
+				<div class="community-images__title-container">
+					<TheContainer>
+						<SectionTitle>Join a thriving community.</SectionTitle>
+					</TheContainer>
+				</div>
+				<CommunityImageSlider />
+			</section>
 		</section>
 	</main>
 </template>
@@ -197,9 +204,7 @@
 		color: $util-gray-color;
 	}
 	.services-section {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include center(row);
 		margin-top: 120px;
 	}
 	.services-section__header {
@@ -208,5 +213,14 @@
 		justify-content: space-between;
 		gap: 32px;
 		margin-bottom: 32px;
+	}
+	.community-images__title-container {
+		@include center(column);
+	}
+	.community-images {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		margin-top: 120px;
 	}
 </style>
