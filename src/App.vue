@@ -68,6 +68,9 @@
 				</section>
 			</TheContainer>
 		</section>
+		<section>
+			<CommunityImageSlider />
+		</section>
 	</main>
 </template>
 
@@ -76,6 +79,7 @@
 
 	import { useDynamicContentByIndex } from "./composables/useDynamicContentByIndex";
 
+	import CommunityImageSlider from "./components/CommunityImageSlider/CommunityImageSlider.vue";
 	import PlatformData from "./components/PlatformData/PlatformData.vue";
 	import ServiceControls from "./components/Service/ServiceControls.vue";
 	import Companies from "./components/Companies/Companies.vue";
