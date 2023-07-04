@@ -14,36 +14,20 @@
 <style scoped lang="scss">
 	.infinite-auto-scroll {
 		display: flex;
-		position: relative;
-		width: 100vw;
-	}
-	.infinite-auto-scroll__content {
-		display: flex;
 		gap: 32px;
-		position: absolute;
-		left: 0%;
-		top: 0%;
+		overflow: hidden;
 	}
-	@keyframes initial {
+
+	.infinite-auto-scroll__content {
+		animation: slide 10s linear infinite;
+	}
+
+	@keyframes slide {
 		from {
-			left: 0%;
+			transform: translateX(0);
 		}
 		to {
-			left: -100%;
+			transform: translateX(-101.5%);
 		}
-	}
-	@keyframes end {
-		from {
-			left: 100%;
-		}
-		to {
-			left: 0%;
-		}
-	}
-	.initial {
-		animation: initial 3s linear infinite;
-	}
-	.end {
-		animation: end 3s linear infinite;
 	}
 </style>
