@@ -1,7 +1,7 @@
 <template>
 	<ul class="sub-brand-images">
-		<li v-for="image of images" :key="image.src">
-			<img :src="image.src" />
+		<li v-for="(image, index) of images" :key="image.src">
+			<img :src="image.src" :alt="image.alt ?? `Image ${index}`" />
 		</li>
 	</ul>
 </template>

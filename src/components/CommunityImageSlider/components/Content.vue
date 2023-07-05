@@ -5,21 +5,25 @@
 			label="Solana Hacker House participants"
 			class="hacker-house"
 		/>
-		<img class="full" src="/community/image-3.png" />
+		<img class="full" src="/community/image-3.png" alt="Image 3" />
 		<DataBlock
 			value="3,800"
 			label="Solana Breakpoint 2022 attendees"
 			class="solana-breakpoint"
 		/>
-		<img class="full-expanded lg" src="/community/image-2.png" />
-		<img class="full" src="/community/image-1.png" />
-		<img class="full-expanded middle" src="/community/image-4.png" />
+		<img class="full-expanded lg" src="/community/image-2.png" alt="Image 2" />
+		<img class="full" src="/community/image-1.png" alt="Image 1" />
+		<img
+			class="full-expanded middle"
+			src="/community/image-4.png"
+			alt="Image 4"
+		/>
 		<DataBlock
 			value="48,000"
 			label="Developers building during Solana Hackathons"
 			class="dev-hackathons"
 		/>
-		<img class="full" src="/community/image-5.png" />
+		<img class="full" src="/community/image-5.png" alt="Image 5" />
 	</div>
 </template>
 

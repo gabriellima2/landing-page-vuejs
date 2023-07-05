@@ -1,10 +1,15 @@
 <template>
 	<article class="service">
 		<section class="service-main">
-			<img :src="image.src" class="service-main__image" />
+			<img
+				:src="image.src"
+				:alt="image.alt ?? 'Service Image'"
+				class="service-main__image"
+			/>
 			<div class="service-content">
 				<img
 					:src="content.brandImage.src"
+					:alt="image.alt ?? 'Brand Image'"
 					class="service-content__brand-image"
 				/>
 				<p>

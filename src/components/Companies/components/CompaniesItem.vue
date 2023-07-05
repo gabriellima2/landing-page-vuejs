@@ -3,7 +3,7 @@
 		<img
 			class="companies-item__img"
 			:src="img.src"
-			:alt="img.alt ?? `Logo de ${name}`"
+			:alt="img.alt ?? `${name} Logo`"
 		/>
 	</li>
 </template>

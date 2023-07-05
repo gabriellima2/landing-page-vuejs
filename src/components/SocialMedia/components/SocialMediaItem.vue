@@ -4,7 +4,7 @@
 			<img
 				class="social-media-item__icon"
 				:src="icon.src"
-				:alt="icon.alt ? icon.alt : `Icone de ${name}`"
+				:alt="icon.alt ?? `${name} icon`"
 			/>
 		</a>
 	</li>
