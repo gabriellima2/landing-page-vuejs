@@ -1,11 +1,13 @@
 <template>
-	<a class="social-media-item" target="_blank" rel="noreferrer" :title="name">
-		<img
-			class="social-media-item__icon"
-			:src="icon.src"
-			:alt="icon.alt ? icon.alt : `Icone de ${name}`"
-		/>
-	</a>
+	<li>
+		<a class="social-media-item" target="_blank" rel="noreferrer" :title="name">
+			<img
+				class="social-media-item__icon"
+				:src="icon.src"
+				:alt="icon.alt ? icon.alt : `Icone de ${name}`"
+			/>
+		</a>
+	</li>
 </template>
 
 <script setup lang="ts">

@@ -1,11 +1,11 @@
 <template>
-	<div class="companies-item" :title="name">
+	<li class="companies-item" :aria-label="name">
 		<img
 			class="companies-item__img"
 			:src="img.src"
 			:alt="img.alt ?? `Logo de ${name}`"
 		/>
-	</div>
+	</li>
 </template>
 
 <script setup lang="ts">
