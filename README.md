@@ -9,6 +9,15 @@ Esta Landing Page foi criada usando VueJS, Typescript e SASS. O objetivo deste p
 - Aperfeiçoar o Pixel Perfect para garantir que o site seja fiel ao design original.
 - Ganhar mais experiência com VueJS e SASS, aprimorando habilidades nessas tecnologias.
 
+# Design
+
+<div align="center">
+  <img src="./public/docs/design.png" alt="Demonstração do projeto" >
+</div>
+
+- Design feito por [Duncan Oluwaseun](https://www.figma.com/@duncanoluwaseun)
+- Solana [Site Oficial](https://solana.com/)
+
 # Tecnologias
 
 <p>Foram usadas as seguintes tecnologias:</p>
