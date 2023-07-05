@@ -1,18 +1,39 @@
-# Vue 3 + TypeScript + Vite
+<h1 align="center">
+    Landing Page
+</h1>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Esta Landing Page foi criada usando VueJS, Typescript e SASS. O objetivo deste projeto é praticar o desenvolvimento de sites a partir de designs prontos.
 
-## Recommended IDE Setup
+# Objetivos
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Aperfeiçoar o Pixel Perfect para garantir que o site seja fiel ao design original.
+- Ganhar mais experiência com VueJS e SASS, aprimorando habilidades nessas tecnologias.
 
-## Type Support For `.vue` Imports in TS
+# Tecnologias
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+<p>Foram usadas as seguintes tecnologias:</p>
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- [VueJS](https://br.vuejs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [SASS](https://sass-lang.com/)
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+# Rodando o projeto
+
+OBS: É necessário que o [Git](https://git-scm.com/) esteja instalado em sua máquina.
+
+Você precisa ter o [Node](https://nodejs.org/en/), o [Git](https://git-scm.com/) e algum gerenciador de pacotes([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) | [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)) instalados em sua máquina.
+
+```bash
+1. Clone o repositório:
+$ git clone https://github.com/gabriellima2/landing-page-vuejs.git
+
+2. Acesse a pasta e instale as dependências via terminal:
+$ yarn || npm i
+
+3. Inicie a aplicação em modo de desenvolvimento:
+$ yarn dev || npm run dev
+
+4. O servidor será aberto em http://localhost:5173
+```
+
+<p align="center">Projeto feito com 💙 por <a href="https://www.linkedin.com/in/gabriel-lima-860612236">Gabriel Lima</a></p>
