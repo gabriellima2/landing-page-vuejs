@@ -88,6 +88,7 @@
 			</section>
 		</section>
 	</main>
+	<TheFooter />
 </template>
 
 <script setup lang="ts">
@@ -106,6 +107,7 @@
 	import BaseButton from "./components/BaseButton.vue";
 	import TheHeader from "./components/TheHeader.vue";
 	import Indicator from "./components/Indicator.vue";
+	import TheFooter from "./components/TheFooter.vue";
 
 	import { companies } from "./assets/companies";
 	import { services } from "./assets/services";
@@ -119,6 +121,7 @@
 
 <style scoped lang="scss">
 	@import "./styles/scss/main";
+	$default-space: 120px;
 	.hero-section {
 		@include center(column);
 		max-width: 100%;
@@ -168,7 +171,7 @@
 	.hero-companies {
 		@include center(column);
 		gap: 34px;
-		margin-top: 120px;
+		margin-top: $default-space;
 	}
 	.hero-companies__title {
 		font-weight: 400;
@@ -185,7 +188,7 @@
 		justify-content: space-between;
 		gap: 48px;
 		flex-wrap: wrap;
-		margin-top: 120px;
+		margin-top: $default-space;
 	}
 	.row-section__title {
 		@media screen and (min-width: $md-screen) {
@@ -214,7 +217,7 @@
 	}
 	.services-section {
 		@include center(row);
-		margin-top: 120px;
+		margin-top: $default-space;
 	}
 	.services-section__header {
 		display: flex;
@@ -230,7 +233,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
-		margin-top: 120px;
+		margin-top: $default-space;
 	}
 	.join-us-section {
 		max-width: 100%;
@@ -241,7 +244,7 @@
 	}
 	.start-building {
 		@include center(column);
-		padding: 120px 0px 190px 0px;
+		padding: $default-space 0px 190px 0px;
 	}
 	.start-building-content {
 		@include center(column);
